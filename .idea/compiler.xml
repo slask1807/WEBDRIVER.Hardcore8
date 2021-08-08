@@ -10,5 +10,6 @@
         <module name="WEBDRIVER" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="16" />
   </component>
 </project>
