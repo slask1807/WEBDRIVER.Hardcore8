@@ -1,7 +1,9 @@
 package Test;
 
-import PageObject.BasePage;
-//import PageObject.Main;
+import PageObject.CalculatorPage;
+import PageObject.EmailPage;
+import PageObject.EmailPageReturn;
+import PageObject.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
@@ -13,21 +15,28 @@ import java.util.concurrent.TimeUnit;
 
 public class TestBase {
     public WebDriver driver;
-    public Check taskOne;
-    public BasePage basePage;
+    public CalculatorPage calculatorPage;
+    public HomePage homePage;
+    public EmailPage emailPage;
+    public EmailPageReturn emailPageReturn;
+    public Check check;
 
     @Before
-    public void start(){
+    public void start() {
         WebDriverManager.chromedriver().setup();
-        driver  = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        taskOne = PageFactory.initElements(driver, Check.class);
-        basePage = PageFactory.initElements(driver, BasePage.class);
+        homePage = PageFactory.initElements(driver, HomePage.class);
+        calculatorPage = PageFactory.initElements(driver, CalculatorPage.class);
+        emailPage = PageFactory.initElements(driver, EmailPage.class);
+        emailPageReturn = PageFactory.initElements(driver, EmailPageReturn.class);
+        check = PageFactory.initElements(driver, Check.class);
     }
+
     @After
-    public void finish(){
-     //  driver.quit();
+    public void finish() {
+        //  driver.quit();
     }
 
 }

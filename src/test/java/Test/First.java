@@ -1,41 +1,39 @@
 package Test;
 
-import PageObject.BasePage;
 import org.junit.Test;
 
 public class First extends TestBase {
     @Test
     public void firstTest() throws InterruptedException {
-        basePage.goTo();
-        basePage.getSearchInput("Google Cloud Platform Pricing Calculator");
-        basePage.getSearchInputClick();
-        basePage.enterToFrame();
-        basePage.getSearchCalcClick();
-        basePage.fillSearchCalc("Compute Engine");
-        basePage.searchCalcLeave();
-        basePage.fillNumberOfInstances("4");
-        basePage.clickSeries();
-        basePage.clickMashinneTypeRol();
-        basePage.clickAddGPUs();
-        basePage.clickNumberOfGPU();
-        basePage.clickGPUtypeRol();
-        basePage.clickGPUtype();
-        basePage.clicklocalSSD();
-        basePage.chooseDatacenterlocation();
-        basePage.chooseCommiteduUsage();
-        basePage.clickAddToEstimate();
-        basePage.clickEmailEstimate();
-        basePage.ChangeNewWindow();
-        basePage.setNewWindow();
-        basePage.getCopyEmail();
-        basePage.setOriginalWindow();
-        basePage.enterToFrame();
-        basePage.getPasteEmail();
-        basePage.getClickSendReportOnEmail();
-        basePage.setNewWindow();
-        basePage.getWaitReceiveEmail();
-        basePage.clickFindMail();
-        basePage.clickEmailWithoutAdvertising();
-        taskOne.checkPageIsCorrect();
+        homePage.goTo();
+        homePage.getSearchInput("Google Cloud Platform Pricing Calculator");
+        homePage.getSearchInputClick();
+        calculatorPage.enterToFrame();
+        calculatorPage.fillSearchCalc("Compute Engine");
+        calculatorPage.searchCalcLeave();
+        calculatorPage.fillNumberOfInstances("4");
+        calculatorPage.clickSeries();
+        calculatorPage.clickMashinneTypeRol();
+        calculatorPage.clickAddGPUs();
+        calculatorPage.clickNumberOfGPU();
+        calculatorPage.clickGPUtypeRol();
+        calculatorPage.clickGPUtype();
+        calculatorPage.clicklocalSSD();
+        calculatorPage.chooseDatacenterlocation();
+        calculatorPage.chooseCommiteduUsage();
+        calculatorPage.clickAddToEstimate();
+        calculatorPage.clickEmailEstimate();
+        emailPage.ChangeNewWindow();
+        emailPage.setNewWindow();
+        emailPage.getCopyEmail();
+        emailPage.setOriginalWindow();
+        homePage.enterToFrame();
+        emailPage.getPasteEmail();
+        homePage.getClickSendReportOnEmail();
+        emailPage.setNewWindow();
+        emailPageReturn.getWaitReceiveEmail();
+        emailPageReturn.clickFindMail();
+        emailPageReturn.clickEmailWithoutAdvertising();
+        check.checkPageIsCorrect();
     }
 }
