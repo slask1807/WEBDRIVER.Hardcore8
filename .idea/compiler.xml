@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ICanWin" />
         <module name="WEBDRIVER" />
+        <module name="webdriver2BringItOn" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="16" />
